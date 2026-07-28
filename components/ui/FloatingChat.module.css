@@ -1,0 +1,37 @@
+.floatingChat {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #00b67a;
+  color: var(--white);
+  padding: 14px 22px;
+  border-radius: var(--radius-full);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 20px rgba(0, 182, 122, 0.4);
+  transition: var(--transition);
+  text-decoration: none;
+  animation: float 3s ease-in-out infinite;
+}
+
+.floatingChat:hover {
+  background: #00a06b;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0, 182, 122, 0.55);
+}
+
+@media (max-width: 480px) {
+  .floatingChat span {
+    display: none;
+  }
+
+  .floatingChat {
+    padding: 14px;
+    border-radius: 50%;
+  }
+}

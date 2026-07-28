@@ -1,0 +1,436 @@
+/* ─── Section ──────────────────────────────────────────────────── */
+.section {
+  background: var(--white);
+  padding: 100px 0;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
+
+/* ─── Header ───────────────────────────────────────────────────── */
+.headerWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.headerWrap.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.accent {
+  color: var(--accent);
+}
+
+/* ─── Tabs ─────────────────────────────────────────────────────── */
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: var(--off-white);
+  border: 1.5px solid var(--border-dark);
+  border-radius: var(--radius-full);
+  padding: 5px;
+  gap: 4px;
+  margin: 16px auto 40px auto;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border-radius: var(--radius-full);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.tab:hover:not(.activeTab) {
+  color: var(--text-dark);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.activeTab {
+  background: var(--primary);
+  color: var(--white);
+  box-shadow: var(--shadow-md);
+}
+
+.tabIcon {
+  display: flex;
+  align-items: center;
+}
+
+/* ─── Panel ────────────────────────────────────────────────────── */
+.panel {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.panel.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tagline {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 48px;
+  font-style: italic;
+}
+
+/* ─── Timeline ─────────────────────────────────────────────────── */
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 32px;
+}
+
+/* Vertical connecting line */
+.connectorLine {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  bottom: 30px;
+  width: 3px;
+  background: linear-gradient(180deg, #3b82f6 0%, var(--accent) 50%, var(--purple-light) 100%);
+  border-radius: 2px;
+  z-index: 0;
+}
+
+/* ─── Level Block ──────────────────────────────────────────────── */
+.levelBlock {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 20px 0;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.levelBlock.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Step number bubble */
+.stepBubble {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--white);
+  flex-shrink: 0;
+  box-shadow: var(--shadow-md);
+  border: 3px solid var(--white);
+  position: relative;
+  z-index: 2;
+}
+
+/* Color variants for bubbles */
+.color-blue .stepBubble { background: #3b82f6; }
+.color-orange .stepBubble { background: var(--accent); }
+.color-purple .stepBubble { background: var(--purple-light); }
+
+/* ─── Card ─────────────────────────────────────────────────────── */
+.card {
+  flex: 1;
+  border: 1.5px solid var(--border-dark);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+/* Card left border accent */
+.color-blue .card { border-left: 4px solid #3b82f6; }
+.color-orange .card { border-left: 4px solid var(--accent); }
+.color-purple .card { border-left: 4px solid var(--purple-light); }
+
+/* Card header */
+.cardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.cardHeadLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.levelBadge {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+.color-blue .levelBadge { background: rgba(59, 130, 246, 0.1); color: #3b82f6; }
+.color-orange .levelBadge { background: rgba(245, 166, 35, 0.12); color: var(--accent-dark); }
+.color-purple .levelBadge { background: rgba(90, 79, 207, 0.1); color: var(--purple-light); }
+
+.levelTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.durationBadge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--off-white);
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-dark);
+  flex-shrink: 0;
+}
+
+/* Card body */
+.cardBody {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0;
+  padding: 20px 24px 24px;
+}
+
+.colHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+/* Topics column */
+.topicList {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  list-style: none;
+}
+
+.topicItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.checkGreen {
+  color: #16a34a;
+  flex-shrink: 0;
+}
+
+/* Vertical divider */
+.divider {
+  width: 1px;
+  background: var(--border-dark);
+  margin: 0 24px;
+  align-self: stretch;
+}
+
+/* Projects column */
+.projectList {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  list-style: none;
+}
+
+.projectItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.projectDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.color-blue .projectDot { background: #3b82f6; }
+.color-orange .projectDot { background: var(--accent); }
+.color-purple .projectDot { background: var(--purple-light); }
+
+/* ─── Kit Banner ───────────────────────────────────────────────── */
+.kitBanner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 28px;
+  border-radius: var(--radius-xl);
+  margin-top: 8px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.kitBanner.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.kitPaid {
+  background: rgba(245, 166, 35, 0.08);
+  border: 1.5px solid rgba(245, 166, 35, 0.35);
+  color: var(--text-dark);
+}
+
+.kitPaid svg {
+  color: var(--accent);
+}
+
+.kitIncluded {
+  background: rgba(22, 163, 74, 0.06);
+  border: 1.5px solid rgba(22, 163, 74, 0.3);
+  color: var(--text-dark);
+}
+
+.kitIncluded svg {
+  color: #16a34a;
+}
+
+.kitText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.kitLabel {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.kitNote {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.kitPrice {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--text-dark);
+}
+
+.kitPaid .kitPrice { color: var(--accent-dark); }
+.kitIncluded .kitPrice { color: #16a34a; font-size: 1rem; }
+
+/* ─── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .connectorLine {
+    left: 24px;
+  }
+
+  .stepBubble {
+    width: 48px;
+    height: 48px;
+    font-size: 1.1rem;
+  }
+
+  .cardBody {
+    grid-template-columns: 1fr;
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    margin: 16px 0;
+  }
+
+  .cardHead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 560px) {
+  .tabs {
+    flex-direction: column;
+    border-radius: var(--radius-xl);
+    width: 100%;
+  }
+
+  .tab {
+    justify-content: center;
+  }
+
+  .levelBlock {
+    gap: 16px;
+  }
+
+  .kitBanner {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .kitPrice {
+    font-size: 1.2rem;
+  }
+}
