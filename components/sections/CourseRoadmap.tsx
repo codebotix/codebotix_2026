@@ -6,7 +6,7 @@ import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 import SectionHeader from '@/components/ui/SectionHeader';
 import styles from './CourseRoadmap.module.css';
 
-/* ─── Data ────────────────────────────────────────────────────── */
+/* ─── Data ─────────────────────────────────────────────────── */
 const courses = {
   robotics: {
     id: 'robotics',
