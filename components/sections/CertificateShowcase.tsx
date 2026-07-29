@@ -41,7 +41,7 @@ export default function CertificateShowcase() {
             <div className={styles.certFrame}>
               <Image
                 src="/codebotix_certificate.png"
-                alt="CodeBotix ISRO-recognised Certificate of Completion sample"
+                alt="CodeBotix Certificate of Completion sample"
                 width={700}
                 height={500}
                 className={styles.certImg}
