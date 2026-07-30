@@ -265,11 +265,20 @@
   color: var(--primary);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .grid {
     grid-template-columns: 1fr;
     max-width: 520px;
-    margin: 0 auto 40px;
+    margin: 0 auto 32px;
+  }
+
+  /* Show only 1 feedback card at a time on mobile view */
+  .grid > .card:nth-child(n+2) {
+    display: none;
+  }
+
+  .card {
+    padding: 26px 20px;
   }
 }
 
@@ -279,5 +288,9 @@
     flex-direction: column;
     padding: 16px;
     gap: 8px;
+  }
+
+  .controls {
+    gap: 12px;
   }
 }

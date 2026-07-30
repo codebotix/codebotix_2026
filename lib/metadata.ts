@@ -3,9 +3,9 @@ import type { Metadata } from 'next';
 
 const siteConfig = {
   name: 'CodeBotix',
-  tagline: 'Online Robotics & AI Classes for Kids Ages 10–17',
+  tagline: 'ISRO-Recognised Online Robotics & AI Classes for Kids Ages 10–17',
   description:
-    'Join CodeBotix for world-class online robotics and AI courses designed for kids aged 10–17. Build real robots, create smart apps, and design cool gadgets with ISRO-recognised tutors. Step-by-step hands-on learning from home.',
+    'Premier live 1:1 online Robotics and AI courses for kids aged 10–17. Build real hardware robots, program Arduino, master Python & ChatGPT tools, and earn ISRO-recognised certificates with expert mentor guidance.',
   url: 'https://www.codebotix.com',
   ogImage: '/og-image.png',
   twitterHandle: '@codebotix',
@@ -13,13 +13,15 @@ const siteConfig = {
     'online robotics classes for kids',
     'AI courses for children',
     'STEM education online',
-    'robotics for kids aged 10-17',
+    'robotics classes for kids aged 10-17',
     'coding classes for kids',
-    'ISRO recognised curriculum',
+    'ISRO recognised robotics certificate',
     'hands-on tech learning',
     'build robots at home',
     'kids AI programming',
-    'CodeBotix',
+    'Arduino robotics for kids',
+    'CodeBotix online courses',
+    'live 1:1 robotics mentorship',
   ],
 };
 
@@ -62,7 +64,7 @@ export const defaultMetadata: Metadata = {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: 'CodeBotix: Online Robotics & AI Classes for Kids',
+        alt: 'CodeBotix: ISRO-Recognised Online Robotics & AI Classes for Kids',
       },
     ],
   },
@@ -72,9 +74,6 @@ export const defaultMetadata: Metadata = {
     description: siteConfig.description,
     creator: siteConfig.twitterHandle,
     images: [siteConfig.ogImage],
-  },
-  verification: {
-    google: 'your-google-verification-code',
   },
   alternates: {
     canonical: siteConfig.url,
@@ -92,19 +91,20 @@ export const organizationSchema = {
     '@type': 'ContactPoint',
     telephone: '+91-9150395889',
     contactType: 'customer service',
-    availableLanguage: ['English', 'Hindi'],
+    availableLanguage: ['English', 'Hindi', 'Tamil'],
   },
   sameAs: [
     'https://www.youtube.com/@codebotix',
     'https://www.instagram.com/codebotix',
     'https://www.facebook.com/codebotix',
   ],
+  award: 'Mentored by ISRO Mentors & STEM Grant Recipients',
 };
 
 export const courseSchema = {
   '@context': 'https://schema.org',
   '@type': 'Course',
-  name: 'Online Robotics & AI Classes for Kids',
+  name: 'Online Robotics & AI Classes for Kids (Ages 10-17)',
   description: siteConfig.description,
   provider: {
     '@type': 'Organization',
@@ -117,7 +117,32 @@ export const courseSchema = {
     educationalRole: 'student',
     audienceType: 'Children aged 10-17',
   },
-  teaches: ['Robotics', 'Artificial Intelligence', '3D Printing', 'Coding', 'App Development'],
+  teaches: [
+    'Robotics & Electronics',
+    'Arduino Hardware & Programming',
+    'Artificial Intelligence & Ethics',
+    'Prompt Engineering & AI Tools',
+    '3D Printing & CAD Design',
+    'App Development & Automation',
+  ],
+  hasCourseInstance: {
+    '@type': 'CourseInstance',
+    courseMode: 'online',
+    courseWorkload: 'Live 1:1 online sessions with robotics kit',
+  },
+};
+
+export const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: siteConfig.name,
+  url: siteConfig.url,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${siteConfig.url}/#faq?q={search_term_string}`,
+    'query-input': 'required name=search_term_string',
+  },
 };
 
 export { siteConfig };
+

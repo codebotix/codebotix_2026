@@ -42,8 +42,8 @@ export default function CertificateShowcase() {
               <Image
                 src="/codebotix_certificate.png"
                 alt="CodeBotix Certificate of Completion sample"
-                width={700}
-                height={500}
+                width={500}
+                height={350}
                 className={styles.certImg}
                 priority
               />
