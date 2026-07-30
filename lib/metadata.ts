@@ -6,7 +6,7 @@ const siteConfig = {
   tagline: 'ISRO-Recognised Online Robotics & AI Classes for Kids Ages 10–17',
   description:
     'Premier live 1:1 online Robotics and AI courses for kids aged 10–17. Build real hardware robots, program Arduino, master Python & ChatGPT tools, and earn ISRO-recognised certificates with expert mentor guidance.',
-  url: 'https://www.codebotix.com',
+  url: 'https://www.codebotix.in',
   ogImage: '/og-image.png',
   twitterHandle: '@codebotix',
   keywords: [

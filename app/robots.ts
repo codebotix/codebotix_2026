@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://www.codebotix.com/sitemap.xml',
+    sitemap: 'https://www.codebotix.in/sitemap.xml',
   };
 }
