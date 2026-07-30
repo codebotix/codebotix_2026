@@ -3,6 +3,7 @@ import './globals.css';
 import { defaultMetadata, organizationSchema, courseSchema, websiteSchema } from '@/lib/metadata';
 import FloatingChat from '@/components/ui/FloatingChat';
 import SmoothScroll from '@/components/ui/SmoothScroll';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 export const metadata: Metadata = defaultMetadata;
 
@@ -11,6 +12,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+
   return (
     <html lang="en">
       <head>
@@ -41,6 +44,7 @@ export default function RootLayout({
           <FloatingChat />
         </SmoothScroll>
       </body>
+      {gaId && <GoogleAnalytics gaId={gaId} />}
     </html>
   );
 }
