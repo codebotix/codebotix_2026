@@ -3,9 +3,9 @@ import type { Metadata } from 'next';
 
 const siteConfig = {
   name: 'CodeBotix',
-  tagline: 'ISRO-Recognised Online Robotics & AI Classes for Kids Ages 10–17',
+  tagline: 'Robotics, AI & Coding Classes for Kids',
   description:
-    'Premier live 1:1 online Robotics and AI courses for kids aged 10–17. Build real hardware robots, program Arduino, master Python & ChatGPT tools, and earn ISRO-recognised certificates with expert mentor guidance.',
+    'CodeBotix offers hands-on Robotics and AI programs for students through project-based learning and interactive classes.',
   url: 'https://www.codebotix.in',
   ogImage: '/og-image.png',
   twitterHandle: '@codebotix',
@@ -51,6 +51,9 @@ export const defaultMetadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  verification: {
+    google: 'googlebecc4544b2b99fab',
   },
   openGraph: {
     type: 'website',
