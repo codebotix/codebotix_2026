@@ -64,48 +64,57 @@ const courses = {
     label: 'Artificial Intelligence Path',
     icon: <BrainCircuit size={20} />,
     tagline: 'Progressive learning path from AI fundamentals to Deep Learning & Generative AI',
-    kit: { price: 'Classroom Materials Included', note: 'Curriculum & Software Access Included', label: 'All Learning Materials Included', included: true },
+    kit: {
+      included: true,
+      label: 'Course Benefits & Inclusions',
+      highlights: [
+        'Live 1:1 Online Mentoring',
+        'AI Tools & Software Access Included',
+        'Certificate of Completion',
+        'Project Portfolio & Learning Resources Included',
+      ],
+    },
     levels: [
       {
         num: 1,
         badge: 'Level 1',
         title: 'Foundation AI',
-        duration: '15 Days',
+        duration: '15 Live Classes',
         topics: [
-          'What is AI & Machine Learning, real-world examples',
-          'Hands-on with visual AI tools & datasets',
-          'Build your first image classifier',
-          "Understand how computers 'learn' from data",
+          "Understand what AI is and where it's used every day",
+          'Use 10+ AI tools to create text, images, videos, music & presentations',
+          'Learn prompt engineering and AI safety',
+          'Build your own AI content portfolio',
         ],
-        projects: ['Image classification model', 'Visual AI dataset project', 'Smart pattern learner'],
+        projects: ['AI Storybook', 'AI Advertisement Campaign', 'AI Video & Image Portfolio'],
         color: 'blue',
       },
       {
         num: 2,
         badge: 'Level 2',
         title: 'Intermediate AI',
-        duration: '15 Days',
+        duration: '15 Live Classes',
         topics: [
-          'Python programming for AI applications',
-          'Train custom machine learning models',
-          'Natural language processing basics',
-          'Build a chatbot from scratch',
+          'Learn AI through Scratch & PictoBlox',
+          'Build games using face, hand & object detection',
+          'Train your own image recognition model',
+          'Create interactive AI applications',
         ],
-        projects: ['Custom trained ML model', 'Conversational Chatbot', 'Text analysis engine'],
+        projects: ['AI Face Detection Game', 'Image Recognition Model', 'Interactive AI Game'],
         color: 'orange',
       },
       {
         num: 3,
         badge: 'Level 3',
         title: 'Advanced AI',
-        duration: '15 Days',
+        duration: '15 Live Classes',
         topics: [
-          'Deep learning & neural network fundamentals',
-          'Computer vision & object detection projects',
-          'Generative AI & creative applications',
-          'Capstone project with real-world impact',
+          'Learn Python programming from scratch',
+          'Connect applications with the Gemini API',
+          'Design AI chatbot interfaces using Gradio',
+          'Build and deploy a real-world AI chatbot',
         ],
-        projects: ['Object detection system', 'Generative AI app', 'Real-world Capstone AI project'],
+        projects: ['AI Chatbot', 'Gradio Web Application', 'Final AI Capstone Project'],
         color: 'purple',
       },
     ],
@@ -253,12 +262,31 @@ export default function CourseRoadmap() {
             ].join(' ')}
             style={{ transitionDelay: '0.6s' }}
           >
-            <Package size={22} aria-hidden="true" />
-            <div className={styles.kitText}>
-              <span className={styles.kitLabel}>{course.kit.label}</span>
-              <span className={styles.kitNote}>{course.kit.note}</span>
-            </div>
-            <span className={styles.kitPrice}>{course.kit.price}</span>
+            {'highlights' in course.kit && course.kit.highlights ? (
+              <div className={styles.kitHighlightsWrap}>
+                <div className={styles.kitHighlightsHeader}>
+                  <Package size={20} aria-hidden="true" />
+                  <span className={styles.kitLabel}>{course.kit.label}</span>
+                </div>
+                <div className={styles.kitHighlightsGrid}>
+                  {course.kit.highlights.map((item) => (
+                    <div key={item} className={styles.kitHighlightItem}>
+                      <CheckCircle2 size={16} className={styles.checkGreen} />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <>
+                <Package size={22} aria-hidden="true" />
+                <div className={styles.kitText}>
+                  <span className={styles.kitLabel}>{course.kit.label}</span>
+                  {'note' in course.kit && <span className={styles.kitNote}>{course.kit.note}</span>}
+                </div>
+                {'price' in course.kit && <span className={styles.kitPrice}>{course.kit.price}</span>}
+              </>
+            )}
           </div>
         </div>
       </div>
