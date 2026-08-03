@@ -93,8 +93,8 @@ const programData: Record<
         stepNum: 1,
         levelNum: 'Level 1',
         stage: 'Foundation',
-        originalPrice: '₹6,750',
-        price: '₹5,700',
+        originalPrice: '₹7,000',
+        price: '₹6,750',
         period: 'per level',
         features: [
           'What is AI & Machine Learning, real-world examples',
@@ -108,8 +108,8 @@ const programData: Record<
         stepNum: 2,
         levelNum: 'Level 2',
         stage: 'Intermediate',
-        originalPrice: '₹7,200',
-        price: '₹6,000',
+        originalPrice: '₹8,000',
+        price: '₹7,500',
         period: 'per level',
         features: [
           'Python programming for AI applications',
@@ -123,8 +123,8 @@ const programData: Record<
         stepNum: 3,
         levelNum: 'Level 3',
         stage: 'Advanced',
-        originalPrice: '₹7,500',
-        price: '₹6,750',
+        originalPrice: '₹8,500',
+        price: '₹8,250',
         period: 'per level',
         features: [
           'Deep learning & neural network fundamentals',
