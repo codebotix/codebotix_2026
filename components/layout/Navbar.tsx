@@ -7,11 +7,12 @@ import Button from '@/components/ui/Button';
 import styles from './Navbar.module.css';
 
 const navLinks = [
-  { label: 'About Us', href: '#about' },
-  { label: 'Courses', href: '#roadmap' },
-  { label: 'Pricing', href: '#programs' },
-  { label: 'FAQs', href: '#faq' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'About Us', href: '/about' },
+  { label: 'Courses', href: '/#roadmap' },
+  { label: 'Pricing', href: '/#programs' },
+  { label: 'FAQs', href: '/#faq' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export default function Navbar() {
@@ -34,13 +35,13 @@ export default function Navbar() {
       <nav className={styles.nav} aria-label="Main navigation">
         <div className={styles.container}>
           {/* Logo */}
-          <a href="#" className={styles.logo} aria-label="CodeBotix home" id="nav-logo">
+          <a href="/" className={styles.logo} aria-label="CodeBotix home" id="nav-logo">
             <span className={styles.logoIcon}>
               <Image
                 src="/codebotix_.png"
                 alt="CodeBotix logo"
-                width={130}
-                height={42}
+                width={118}
+                height={38}
                 priority
                 className={styles.logoImg}
               />

@@ -4,12 +4,14 @@ import { PlayCircle, Camera, Share2, MessageSquare, Mail, Phone } from 'lucide-r
 import styles from './Footer.module.css';
 
 const quickLinks = [
-  { label: 'About Us', href: '#about' },
-  { label: 'Courses', href: '#programs' },
-  { label: 'Pricing', href: '#programs' },
-  { label: 'Course Roadmap', href: '#roadmap' },
-  { label: 'Certificate', href: '#certificate' },
-  { label: 'FAQs', href: '#faq' },
+  { label: 'About Us', href: '/about' },
+  { label: 'Courses', href: '/#programs' },
+  { label: 'Pricing', href: '/#programs' },
+  { label: 'Course Roadmap', href: '/#roadmap' },
+  { label: 'Certificate', href: '/#certificate' },
+  { label: 'FAQs', href: '/#faq' },
+  { label: 'Blog & Articles', href: '/blog' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 const socialLinks = [
@@ -28,7 +30,7 @@ export default function Footer() {
         <div className={styles.grid}>
           {/* Brand */}
           <div className={styles.brand}>
-            <a href="#" className={styles.logo} aria-label="CodeBotix home" id="footer-logo">
+            <a href="/" className={styles.logo} aria-label="CodeBotix home" id="footer-logo">
               <span className={styles.logoIcon}>
                 <Image
                   src="/codebotix_.png"
