@@ -24,19 +24,19 @@ const categories = ['All', 'Robotics', 'AI & Tech', 'STEM Learning', 'News'];
 function getPostIcon(slug: string, isFeatured: boolean = false) {
   const size = isFeatured ? 44 : 30;
   switch (slug) {
-    case 'top-10-robotic-components-every-kid-must-have':
+    case 'essential-robotics-components-for-kids':
       return <Cpu size={size} />;
-    case 'how-to-choose-the-right-online-robotics-class-for-your-kid':
+    case 'how-to-choose-online-robotics-classes-for-kids':
       return <Bot size={size} />;
-    case 'why-every-kid-should-learn-robotics-and-ai-today':
+    case 'why-kids-should-learn-robotics-and-ai':
       return <Brain size={size} />;
-    case 'how-much-do-online-robotics-classes-for-kids-cost-in-india':
+    case 'online-robotics-classes-cost-for-kids':
       return <BookOpen size={size} />;
-    case 'group-classes-vs-1-on-1-robotics-classes-which-is-better':
+    case 'group-vs-one-on-one-robotics-classes-for-kids':
       return <Code2 size={size} />;
-    case 'what-is-a-robotics-certification-and-why-does-it-matter-for-kids':
+    case 'robotics-certification-for-kids-guide':
       return <Rocket size={size} />;
-    case 'meet-codebotix-making-robotics-and-ai-fun-for-kids':
+    case 'about-codebotix-online-ai-and-robotics':
       return <CheckCircle2 size={size} />;
     default:
       return <Sparkles size={size} />;

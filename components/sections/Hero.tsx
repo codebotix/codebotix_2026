@@ -80,8 +80,8 @@ export default function Hero() {
           {/* Main Image */}
           <div className={styles.imageCard}>
             <Image
-              src="/images/hero-kid.jpg"
-              alt="A smiling kid learning robotics and AI online with CodeBotix"
+              src="/images/online-ai-and-robotics-classes-for-kids.jpg"
+              alt="Online AI and robotics class for kids with CodeBotix"
               width={520}
               height={400}
               priority
