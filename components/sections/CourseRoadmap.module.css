@@ -470,3 +470,32 @@
     font-size: 1.2rem;
   }
 }
+
+@media (max-width: 480px) {
+  .connectorLine {
+    left: 18px;
+  }
+
+  .stepBubble {
+    width: 38px;
+    height: 38px;
+    font-size: 0.95rem;
+    border-width: 2px;
+  }
+
+  .levelBlock {
+    gap: 10px;
+  }
+
+  .cardHeader {
+    padding: 16px 14px;
+  }
+
+  .cardBody {
+    padding: 14px;
+  }
+
+  .kitCard {
+    padding: 18px 14px;
+  }
+}

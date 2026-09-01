@@ -428,3 +428,24 @@
     gap: 12px;
   }
 }
+
+@media (max-width: 480px) {
+  .cardHeader,
+  .cardBody,
+  .cardFooter {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .kitCard {
+    padding: 20px 14px;
+  }
+
+  .featuresList {
+    gap: 10px;
+  }
+
+  .cardFooter > * {
+    width: 100%;
+  }
+}

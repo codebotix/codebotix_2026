@@ -193,31 +193,70 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 100px 0 60px;
+    padding: 90px 0 50px;
     min-height: auto;
   }
 
   .container {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 40px;
   }
 
   .imageWrapper {
     order: -1;
+    max-width: 520px;
+    margin: 0 auto;
+    width: 100%;
   }
 
   .ageBadge {
     top: -12px;
     right: -8px;
+    padding: 8px 14px;
+    font-size: 0.8rem;
   }
 
   .highlights {
-    gap: 20px;
+    gap: 16px;
+    justify-content: flex-start;
   }
 }
 
 @media (max-width: 480px) {
+  .hero {
+    padding: 84px 0 40px;
+  }
+
   .ctas {
     flex-direction: column;
+    width: 100%;
+  }
+
+  .ctas > * {
+    width: 100%;
+  }
+
+  .floatBadge1 {
+    left: 4px;
+    bottom: 50px;
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+
+  .floatBadge2 {
+    left: 4px;
+    bottom: 10px;
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+
+  .highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .highlightItem {
+    align-items: flex-start;
   }
 }

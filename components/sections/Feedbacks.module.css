@@ -294,3 +294,23 @@
     gap: 12px;
   }
 }
+
+@media (max-width: 480px) {
+  .card {
+    padding: 20px 16px;
+  }
+
+  .author {
+    gap: 10px;
+  }
+
+  .avatar {
+    width: 42px;
+    height: 42px;
+  }
+
+  .navBtn {
+    width: 44px;
+    height: 44px;
+  }
+}

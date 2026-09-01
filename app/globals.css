@@ -275,6 +275,15 @@ h1, h2, h3, h4, h5, h6 {
   gap: 24px;
 }
 
+img,
+video,
+iframe,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
 @media (max-width: 1024px) {
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
@@ -292,5 +301,12 @@ h1, h2, h3, h4, h5, h6 {
 
   .section {
     padding: var(--section-padding);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --section-padding: 48px 0;
+    --container-padding: 0 16px;
   }
 }

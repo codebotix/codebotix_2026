@@ -152,3 +152,18 @@ a.contactValue:hover {
     min-height: 300px;
   }
 }
+
+@media (max-width: 480px) {
+  .card {
+    padding: 20px 16px;
+  }
+
+  .mapWrap {
+    height: 260px;
+    min-height: 260px;
+  }
+
+  .contactItem {
+    gap: 12px;
+  }
+}

@@ -459,3 +459,25 @@
     padding: 24px;
   }
 }
+
+@media (max-width: 480px) {
+  .categories {
+    gap: 8px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .newsletter {
+    padding: 28px 20px;
+  }
+
+  .featuredTitle {
+    font-size: 1.3rem;
+  }
+
+  .featuredContent {
+    padding: 18px 16px;
+  }
+}

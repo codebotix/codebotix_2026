@@ -211,3 +211,15 @@
     gap: 12px;
   }
 }
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 48px 0 32px;
+  }
+
+  .legal {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

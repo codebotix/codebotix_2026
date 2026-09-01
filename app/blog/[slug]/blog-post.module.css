@@ -16,6 +16,7 @@
   font-size: 0.875rem;
   color: var(--text-light);
   margin-bottom: 32px;
+  flex-wrap: wrap;
 }
 
 .breadcrumbLink {
@@ -29,12 +30,13 @@
 
 .breadcrumbSeparator {
   color: var(--border);
+  flex-shrink: 0;
 }
 
 .breadcrumbActive {
   color: var(--white);
   font-weight: 600;
-  max-width: 300px;
+  max-width: 240px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -61,18 +63,22 @@
 }
 
 .title {
-  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-size: clamp(1.8rem, 4.5vw, 3.2rem);
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 16px;
   color: var(--white);
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .subtitle {
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-size: clamp(1rem, 2vw, 1.25rem);
   color: var(--text-light);
   line-height: 1.6;
   margin-bottom: 32px;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Meta & Author */
@@ -83,6 +89,7 @@
   background: var(--card-dark);
   border: 1px solid var(--border);
   border-radius: var(--radius-full);
+  max-width: 100%;
 }
 
 .authorBox {
@@ -103,6 +110,7 @@
   font-size: 1rem;
   color: var(--white);
   box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
 }
 
 .authorName {
@@ -135,6 +143,8 @@
   grid-template-columns: 1fr 340px;
   gap: 48px;
   align-items: start;
+  min-width: 0;
+  max-width: 100%;
 }
 
 /* Article Body Typography */
@@ -142,6 +152,10 @@
   font-size: 1.05rem;
   line-height: 1.8;
   color: #e2e8f0;
+  min-width: 0;
+  max-width: 100%;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .articleBody h2 {
@@ -151,6 +165,8 @@
   margin: 40px 0 16px;
   padding-bottom: 8px;
   border-bottom: 1px solid var(--border);
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .articleBody h3 {
@@ -158,6 +174,8 @@
   font-weight: 700;
   color: var(--white);
   margin: 28px 0 12px;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .articleBody p {
@@ -203,7 +221,9 @@
 /* Content Table Styling */
 .tableWrapper {
   width: 100%;
+  max-width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   margin: 32px 0;
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
@@ -212,6 +232,7 @@
 
 .contentTable {
   width: 100%;
+  min-width: 440px;
   border-collapse: collapse;
   text-align: left;
   font-size: 0.95rem;
@@ -223,7 +244,6 @@
   font-weight: 700;
   padding: 14px 18px;
   border-bottom: 1px solid var(--border);
-  white-space: nowrap;
 }
 
 .contentTable td {
@@ -240,7 +260,6 @@
 .contentTable tr:nth-child(even) {
   background: rgba(255, 255, 255, 0.02);
 }
-
 
 /* Tags Section */
 .tagsRow {
@@ -263,9 +282,12 @@
   background: rgba(255, 255, 255, 0.08);
   color: var(--white);
   border: 1px solid var(--border);
-  padding: 4px 12px;
+  padding: 6px 12px;
   border-radius: var(--radius-full);
   font-size: 0.8rem;
+  word-break: break-word;
+  max-width: 100%;
+  display: inline-block;
 }
 
 /* ---- Sidebar Widget ---- */
@@ -381,6 +403,7 @@
   color: var(--white);
   margin: 10px 0 8px;
   line-height: 1.35;
+  word-break: break-word;
 }
 
 .relatedCardExcerpt {
@@ -394,18 +417,100 @@
 @media (max-width: 1024px) {
   .contentGrid {
     grid-template-columns: 1fr;
+    gap: 36px;
   }
   .sidebar {
     position: static;
+    max-width: 540px;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 768px) {
+  .main {
+    padding-top: 84px;
+    padding-bottom: 48px;
+  }
+  .header {
+    margin-bottom: 32px;
+  }
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
   .relatedGrid {
     grid-template-columns: 1fr;
   }
   .authorMeta {
     flex-direction: column;
     align-items: flex-start;
+    border-radius: var(--radius-lg);
+    width: 100%;
+    gap: 12px;
+    padding: 16px;
+  }
+  .metaInfo {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    margin-bottom: 24px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .breadcrumbActive {
+    max-width: 140px;
+  }
+
+  .articleBody {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .articleBody h2 {
+    font-size: 1.35rem;
+    margin: 32px 0 14px;
+  }
+
+  .articleBody h3 {
+    font-size: 1.15rem;
+    margin: 24px 0 10px;
+  }
+
+  .callout,
+  .quote {
+    padding: 16px 14px;
+    margin: 20px 0;
+  }
+
+  .ctaCard {
+    padding: 24px 16px;
+  }
+
+  .relatedCard {
+    padding: 18px 16px;
+  }
+
+  .contentTable th,
+  .contentTable td {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+
+  .articleBody pre {
+    padding: 14px;
+    font-size: 0.85rem;
+    overflow-x: auto;
+  }
+
+  .articleBody img {
+    border-radius: var(--radius-md);
   }
 }
