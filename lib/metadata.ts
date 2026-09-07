@@ -3,13 +3,14 @@ import type { Metadata } from 'next';
 
 const siteConfig = {
   name: 'CodeBotix',
-  tagline: 'Robotics, AI & Coding Classes for Kids',
+  tagline: 'Online AI and Robotics Classes for Kids',
   description:
-    'CodeBotix offers hands-on Robotics and AI programs for students through project-based learning and interactive classes.',
+    'Enroll in live 1:1 Online AI and Robotics Classes for Kids aged 10-17 at CodeBotix. Build real hardware robots at home with expert mentorship. Book a free trial class today!',
   url: 'https://www.codebotix.in',
   ogImage: '/og-image.png',
   twitterHandle: '@codebotix',
   keywords: [
+    'Online AI and Robotics Classes for Kids',
     'online robotics classes for kids',
     'AI courses for children',
     'STEM education online',
@@ -28,7 +29,7 @@ const siteConfig = {
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | ${siteConfig.tagline}`,
+    default: 'Online AI and Robotics Classes for Kids | CodeBotix',
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -60,20 +61,20 @@ export const defaultMetadata: Metadata = {
     locale: 'en_IN',
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} | ${siteConfig.tagline}`,
+    title: 'Online AI and Robotics Classes for Kids | CodeBotix',
     description: siteConfig.description,
     images: [
       {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: 'CodeBotix: ISRO-Recognised Online Robotics & AI Classes for Kids',
+        alt: 'CodeBotix: Online AI and Robotics Classes for Kids',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${siteConfig.name} | ${siteConfig.tagline}`,
+    title: 'Online AI and Robotics Classes for Kids | CodeBotix',
     description: siteConfig.description,
     creator: siteConfig.twitterHandle,
     images: [siteConfig.ogImage],
