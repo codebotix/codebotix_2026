@@ -1,6 +1,7 @@
 // components/layout/Footer.tsx
 import Image from 'next/image';
-import { PlayCircle, Camera, Share2, MessageSquare, Mail, Phone } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
+import { YouTubeIcon, InstagramIcon, FacebookIcon, TwitterIcon } from '@/components/ui/SocialIcons';
 import styles from './Footer.module.css';
 
 const quickLinks = [
@@ -15,10 +16,10 @@ const quickLinks = [
 ];
 
 const socialLinks = [
-  { icon: <PlayCircle size={20} />, href: 'https://youtube.com/@codebotix', label: 'YouTube' },
-  { icon: <Camera size={20} />, href: 'https://instagram.com/codebotix', label: 'Instagram' },
-  { icon: <Share2 size={20} />, href: 'https://facebook.com/codebotix', label: 'Facebook' },
-  { icon: <MessageSquare size={20} />, href: 'https://twitter.com/codebotix', label: 'Twitter/X' },
+  { icon: <YouTubeIcon size={20} />, href: 'https://youtube.com/@codebotix', label: 'YouTube' },
+  { icon: <InstagramIcon size={20} />, href: 'https://instagram.com/codebotix', label: 'Instagram' },
+  { icon: <FacebookIcon size={20} />, href: 'https://facebook.com/codebotix', label: 'Facebook' },
+  { icon: <TwitterIcon size={20} />, href: 'https://twitter.com/codebotix', label: 'Twitter/X' },
 ];
 
 export default function Footer() {

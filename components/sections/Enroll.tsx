@@ -11,7 +11,6 @@ const benefits = [
   '1:1 personal instructor attention',
   'Real projects to take home',
   'Flexible scheduling',
-  'Cancel anytime',
 ];
 
 export default function Enroll() {

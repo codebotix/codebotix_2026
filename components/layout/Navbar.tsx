@@ -7,6 +7,7 @@ import Button from '@/components/ui/Button';
 import styles from './Navbar.module.css';
 
 const navLinks = [
+  { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
   { label: 'Courses', href: '/#roadmap' },
   { label: 'Pricing', href: '/#programs' },

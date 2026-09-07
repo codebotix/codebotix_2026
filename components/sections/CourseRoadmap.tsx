@@ -13,7 +13,6 @@ const courses = {
     label: 'Robotics Learning Path',
     icon: <Bot size={20} />,
     tagline: 'Progressive learning path from foundation circuits to AI-powered autonomous robots',
-    kit: { price: '₹6,700', note: 'One-time · Delivery included · Yours to keep', label: 'Essential Learning Kit', included: false },
     levels: [
       {
         num: 1,
@@ -254,40 +253,33 @@ export default function CourseRoadmap() {
           </div>
 
           {/* Kit banner */}
-          <div
-            className={[
-              styles.kitBanner,
-              course.kit.included ? styles.kitIncluded : styles.kitPaid,
-              isVisible ? styles.visible : '',
-            ].join(' ')}
-            style={{ transitionDelay: '0.6s' }}
-          >
-            {'highlights' in course.kit && course.kit.highlights ? (
-              <div className={styles.kitHighlightsWrap}>
-                <div className={styles.kitHighlightsHeader}>
-                  <Package size={20} aria-hidden="true" />
-                  <span className={styles.kitLabel}>{course.kit.label}</span>
+          {'kit' in course && course.kit && (
+            <div
+              className={[
+                styles.kitBanner,
+                course.kit.included ? styles.kitIncluded : styles.kitPaid,
+                isVisible ? styles.visible : '',
+              ].join(' ')}
+              style={{ transitionDelay: '0.6s' }}
+            >
+              {'highlights' in course.kit && course.kit.highlights ? (
+                <div className={styles.kitHighlightsWrap}>
+                  <div className={styles.kitHighlightsHeader}>
+                    <Package size={20} aria-hidden="true" />
+                    <span className={styles.kitLabel}>{course.kit.label}</span>
+                  </div>
+                  <div className={styles.kitHighlightsGrid}>
+                    {course.kit.highlights.map((item) => (
+                      <div key={item} className={styles.kitHighlightItem}>
+                        <CheckCircle2 size={16} className={styles.checkGreen} />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <div className={styles.kitHighlightsGrid}>
-                  {course.kit.highlights.map((item) => (
-                    <div key={item} className={styles.kitHighlightItem}>
-                      <CheckCircle2 size={16} className={styles.checkGreen} />
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ) : (
-              <>
-                <Package size={22} aria-hidden="true" />
-                <div className={styles.kitText}>
-                  <span className={styles.kitLabel}>{course.kit.label}</span>
-                  {'note' in course.kit && <span className={styles.kitNote}>{course.kit.note}</span>}
-                </div>
-                {'price' in course.kit && <span className={styles.kitPrice}>{course.kit.price}</span>}
-              </>
-            )}
-          </div>
+              ) : null}
+            </div>
+          )}
         </div>
       </div>
     </section>

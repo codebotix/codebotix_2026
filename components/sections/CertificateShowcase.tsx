@@ -40,8 +40,8 @@ export default function CertificateShowcase() {
           <div className={styles.imageCard}>
             <div className={styles.certFrame}>
               <Image
-                src="/codebotix_certificate.png"
-                alt="CodeBotix Certificate of Completion sample"
+                src="/isro-recognized-certificate-for-robotics-and-ai-classes-for-kids.jpeg"
+                alt="CodeBotix ISRO-Recognised Certificate of Completion sample"
                 width={500}
                 height={350}
                 className={styles.certImg}
