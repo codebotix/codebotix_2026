@@ -12,7 +12,7 @@ const courses = {
     id: 'robotics',
     label: 'Robotics Learning Path',
     icon: <Bot size={20} />,
-    tagline: 'Progressive learning path from foundation circuits to AI-powered autonomous robots',
+    tagline: 'Progressive online robotics classes for kids with kit included, from circuit foundations to autonomous AI robots',
     levels: [
       {
         num: 1,
@@ -20,10 +20,10 @@ const courses = {
         title: 'Foundation Robotics',
         duration: '15 Days',
         topics: [
-          'Introduction to electronics & circuit basics',
-          'Hands-on with sensors, LEDs & motors',
-          'Build your first working robot',
-          'Learn block-based programming fundamentals',
+          'Robotics basics, safety & electronics',
+          'Build robots with Arduino & sensors',
+          'Learn coding, wiring & troubleshooting',
+          'Test and present a working robot',
         ],
         projects: ['Light-following robot', 'Remote-controlled car', 'Working automated robot'],
         color: 'blue',
@@ -34,10 +34,10 @@ const courses = {
         title: 'Intermediate Robotics',
         duration: '15 Days',
         topics: [
-          'Advanced sensor integration & motor control',
-          'Text-based programming with Arduino',
-          'Build autonomous robots with obstacle avoidance',
-          'Introduction to IoT concepts',
+          'Advanced sensors & Arduino programming',
+          'Build autonomous robots',
+          'Learn wireless control & connectivity',
+          'Test and showcase advanced robots',
         ],
         projects: ['Obstacle avoider bot', 'Smart IoT sensor system', 'Autonomous navigator'],
         color: 'orange',
@@ -48,10 +48,10 @@ const courses = {
         title: 'Advanced Robotics',
         duration: '15 Days',
         topics: [
-          'Complex robotics systems & multi-sensor fusion',
-          'Advanced programming & algorithm design',
-          'Build AI-powered robotic projects',
-          'Introduction to 3D printing for custom parts',
+          'Advanced robotics & precision control',
+          'AI vision, ML & IoT for robots',
+          'Learn Wi-Fi, MQTT & remote control',
+          'Build and present an AI-powered robot',
         ],
         projects: ['Autonomous delivery bot', 'AI-powered companion robot', '3D printed custom bot'],
         color: 'purple',
@@ -62,14 +62,14 @@ const courses = {
     id: 'ai',
     label: 'Artificial Intelligence Path',
     icon: <BrainCircuit size={20} />,
-    tagline: 'Progressive learning path from AI fundamentals to Deep Learning & Generative AI',
+    tagline: 'Certified AI classes for kids from foundational AI principles to Deep Learning and Generative AI',
     kit: {
       included: true,
       label: 'Course Benefits & Inclusions',
       highlights: [
-        'Live 1:1 Online Mentoring',
+        'Live 1:1 Online Mentoring at CodeBotix',
         'AI Tools & Software Access Included',
-        'Certificate of Completion',
+        'ISRO-Recognized Certificate of Completion',
         'Project Portfolio & Learning Resources Included',
       ],
     },
@@ -142,10 +142,10 @@ export default function CourseRoadmap() {
           <SectionHeader
             title={
               <>
-                Our Course <span className={styles.accent}>Roadmap</span>
+                Best Robotics & AI Course <span className={styles.accent}>Roadmap</span>
               </>
             }
-            subtitle="Choose your learning path and grow from beginner to tech champion, 15 days per level."
+            subtitle="Choose the best robotics course for kids or certified ai classes for kids and grow from beginner to tech leader, 15 days per level."
             theme="light"
           />
 

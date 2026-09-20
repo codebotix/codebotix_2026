@@ -32,7 +32,7 @@ const programData: Record<
   robotics: {
     title: 'Robotics Program',
     icon: <Bot size={20} />,
-    description: 'Hands-on hardware & coding track from circuit basics to AI-powered autonomous robots.',
+    description: 'Personalized robotics classes for kids with kit included, taking students from foundation circuits to AI-powered autonomous robots.',
     hasKit: true,
     levels: [
       {
@@ -44,10 +44,11 @@ const programData: Record<
         price: '₹6,000',
         period: 'per level',
         features: [
-          'Introduction to electronics & circuit basics',
-          'Hands-on with sensors, LEDs & motors',
-          'Build your first working robot',
-          'Learn block-based programming fundamentals',
+          'Understand how robots work, their real-world applications, and basic robotics concepts',
+          'Learn electronics, sensors, motors, and Arduino fundamentals through hands-on activities',
+          'Wire, code, and assemble the electronic and mechanical parts of a working robot',
+          'Build and program a robot using both block-based and basic text coding',
+          'Test, troubleshoot, and present a fully functional robot, building a strong foundation for Level 2',
         ],
       },
       {
@@ -59,10 +60,11 @@ const programData: Record<
         price: '₹6,750',
         period: 'per level',
         features: [
-          'Advanced sensor integration & motor control',
-          'Text-based programming with Arduino',
-          'Build autonomous robots with obstacle avoidance',
-          'Introduction to IoT concepts',
+          'Explore advanced sensors, motor control, microcontrollers, and real-world data',
+          'Strengthen coding and control skills through Arduino-based robotics projects',
+          'Design and build autonomous robots using sensor inputs and multi-sensor logic',
+          'Develop robots that can sense, make decisions, navigate, and respond to their environment',
+          'Test, refine, and present advanced autonomous robots, preparing for Level 3 Robotics',
         ],
       },
       {
@@ -74,10 +76,11 @@ const programData: Record<
         price: '₹7,500',
         period: 'per level',
         features: [
-          'Complex robotics systems & multi-sensor fusion',
-          'Advanced programming & algorithm design',
-          'Build AI-powered robotic projects',
-          'Introduction to 3D printing for custom parts',
+          'Master advanced sensors, precision movement, localization, and multi-controller systems',
+          'Build intelligent robots that can sense their surroundings and make decisions using AI',
+          'Integrate Wi-Fi, ESP8266, MQTT, and IoT technologies for connected robotics',
+          'Create robots that can share data, be monitored, and controlled remotely in real time',
+          'Complete and present an advanced AI-powered, IoT-enabled robot designed for real-world applications',
         ],
       },
     ],
@@ -97,11 +100,11 @@ const programData: Record<
         price: '₹6,750',
         period: 'per level',
         features: [
-          "Learn what AI is and how it's used in everyday life",
-          'Explore 10+ AI tools including ChatGPT & Gemini to create text, images, videos, music, presentations, and advertisements',
-          'Master prompt engineering through fun, hands-on activities',
-          'Understand AI ethics, digital safety, and different types of AI',
-          'Build your creative portfolio by presenting AI-generated content around a given theme',
+          'Build a strong foundation in AI with safe and ethical usage',
+          'Use popular AI tools confidently and get better results through smart prompting',
+          'Identify different kinds of AI and understand real-world applications',
+          'Produce original creative content using modern AI tools',
+          'Showcase learning confidently through an AI-powered presentation',
         ],
       },
       {
@@ -113,10 +116,11 @@ const programData: Record<
         price: '₹7,500',
         period: 'per level',
         features: [
-          'Learn AI through visual programming with Scratch & PictoBlox',
-          'Build AI-powered games using face, pose, and object detection',
-          'Train your own image recognition model for a final AI project',
-          'Create interactive AI applications and present your project portfolio',
+          'Build confidence in coding through fun drag-and-drop projects',
+          'Create engaging interactive projects using coding and creativity',
+          'Understand how AI can see, detect, and respond to the world',
+          'Design and build exciting games using coding and AI logic',
+          'Showcase learning confidently through projects and presentations',
         ],
       },
       {
@@ -128,10 +132,11 @@ const programData: Record<
         price: '₹8,250',
         period: 'per level',
         features: [
-          'Learn Python programming for AI from scratch',
-          'Build intelligent chatbots using the Gemini API',
-          'Design and deploy chatbot interfaces with Gradio',
-          'Complete and showcase a real-world AI chatbot as your capstone project',
+          'Understand chatbot basics and identify where chatbots are used',
+          'Build confidence in coding and create simple programs',
+          'Build a complete rule-based chatbot that can talk with users',
+          'Create a chatbot with an interactive and attractive interface',
+          'Build and present an AI chatbot using modern technology',
         ],
       },
     ],
@@ -162,7 +167,7 @@ export default function Programs() {
                 Programs & <span className={styles.accent}>Pricing</span>
               </>
             }
-            subtitle="Transparent pricing per level. All fees include expert instruction and comprehensive materials."
+            subtitle="Transparent pricing for online ai and robotics classes for kids with kit included and certified live mentoring."
             theme="light"
           />
 
@@ -192,7 +197,7 @@ export default function Programs() {
           aria-labelledby={`program-tab-${activeTab}`}
           className={[styles.panel, isVisible ? styles.visible : ''].join(' ')}
         >
-          {/* Level Cards Grid (Progressive Staircase Layout) */}
+          {/* Level Cards Grid */}
           <div className={styles.grid}>
             {currentProgram.levels.map((plan, i) => (
               <div
@@ -245,7 +250,7 @@ export default function Programs() {
                     <span className={styles.kitBadge}>Yours to Keep</span>
                   </div>
                   <p className={styles.kitDescription}>
-                    One comprehensive kit covering all 3 levels: microcontroller, sensors, motors, breadboard, wires, battery pack & components.
+                    One comprehensive kit covering all 3 levels: microcontrollers, sensors, motors, breadboard, wires, battery pack & electronic components.
                   </p>
                 </div>
                 <div className={styles.kitPriceWrap}>
@@ -257,7 +262,7 @@ export default function Programs() {
               <div className={styles.kitFeatures}>
                 <div className={styles.kitFeatureItem}>
                   <Truck size={18} className={styles.kitFeatureIcon} />
-                  <span>Kit delivered to your doorstep within 1 week</span>
+                  <span>Robotics kit delivered to your doorstep within 1 week</span>
                 </div>
                 <div className={styles.kitFeatureItem}>
                   <Sparkles size={18} className={styles.kitFeatureIcon} />
@@ -270,7 +275,7 @@ export default function Programs() {
           {/* Disclaimer / Included Note */}
           <div className={styles.disclaimerNote}>
             <Sparkles size={16} className={styles.disclaimerIcon} />
-            <span>Fees include expert instruction, comprehensive curriculum access, and all necessary classroom materials.</span>
+            <span>Fees include 1:1 expert instruction, comprehensive curriculum access, and all necessary classroom materials.</span>
           </div>
         </div>
       </div>

@@ -23,7 +23,7 @@ export default function ContactAndLocation() {
                 Get in <span className={styles.accent}>Touch</span>
               </>
             }
-            subtitle="Have questions about our robotics or AI programs? Reach out to us via email, phone, or visit our location in Chennai."
+            subtitle="Have questions about CodeBotix online ai and robotics classes for kids or the best robotics classes for kids in chennai? Reach out to our team today."
             theme="light"
           />
         </div>
@@ -35,7 +35,7 @@ export default function ContactAndLocation() {
             <div className={styles.contactCard}>
               <div className={styles.contactIcon}><Phone size={22} /></div>
               <div className={styles.contactDetails}>
-                <p className={styles.contactLabel}>Call Us</p>
+                <p className={styles.contactLabel}>Call CodeBotix</p>
                 <a href="tel:+919150395889" className={styles.contactValue} id="contact-phone">
                   +91 91503 95889
                 </a>
@@ -45,7 +45,7 @@ export default function ContactAndLocation() {
             <div className={styles.contactCard}>
               <div className={styles.contactIcon}><Mail size={22} /></div>
               <div className={styles.contactDetails}>
-                <p className={styles.contactLabel}>Email Us</p>
+                <p className={styles.contactLabel}>Email CodeBotix</p>
                 <a href="mailto:info.codebotix@gmail.com" className={styles.contactValue} id="contact-email">
                   info.codebotix@gmail.com
                 </a>
@@ -55,9 +55,9 @@ export default function ContactAndLocation() {
             <div className={styles.contactCard}>
               <div className={styles.contactIcon}><MapPin size={22} /></div>
               <div className={styles.contactDetails}>
-                <p className={styles.contactLabel}>Location Address</p>
+                <p className={styles.contactLabel}>Chennai Center Address</p>
                 <p className={styles.contactText}>
-                  Sapphire square Apartments, 44/45, Perambur Barracks Rd, Dhibighat, Purasaiwakkam, Chennai, Tamil Nadu 600007, India.
+                  Sapphire Square Apartments, 44/45, Perambur Barracks Rd, Dhibighat, Purasaiwakkam, Chennai, Tamil Nadu 600007, India.
                 </p>
               </div>
             </div>

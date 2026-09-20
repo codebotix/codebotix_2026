@@ -20,7 +20,7 @@ const faqList: FAQData[] = [
     category: 'courses',
     categoryLabel: 'Courses',
     q: 'What age group is CodeBotix suitable for?',
-    a: "CodeBotix offers live online AI and Robotics classes for students aged 10 to 17 years. Our curriculum is designed to match each student's learning level, whether they're complete beginners or already interested in technology.",
+    a: "CodeBotix offers live online AI and robotics classes for kids aged 10 to 17 years. Our curriculum is designed to match each student's learning level, whether they're complete beginners or already interested in technology.",
   },
   {
     id: 'faq-2',
@@ -34,21 +34,21 @@ const faqList: FAQData[] = [
     category: 'courses',
     categoryLabel: 'Courses',
     q: 'What courses does CodeBotix offer?',
-    a: 'CodeBotix offers live 1:1 online courses in Artificial Intelligence (AI) and Robotics. Our project-based programs help students build future-ready skills through practical learning, creativity, and real-world problem-solving.',
+    a: 'CodeBotix offers online ai and robotics classes for kids including certified ai classes for kids and personalized robotics classes for kids with kit included.',
   },
   {
     id: 'faq-4',
     category: 'robotics-ai',
     categoryLabel: 'AI & Robotics',
-    q: 'What will my child learn in the AI course?',
-    a: 'Our AI course for kids introduces students to the exciting world of Artificial Intelligence through practical activities and real-world applications. Students learn how AI works, explore tools like ChatGPT, create presentations, images, videos, and chatbots, while also learning prompt engineering, AI ethics, automation, and responsible AI usage.',
+    q: 'What will my child learn in the best ai class for children?',
+    a: 'In the best ai class for children at CodeBotix, students learn how AI works, explore tools like ChatGPT and Gemini, create text, images, videos, and chatbots, while mastering prompt engineering, AI ethics, automation, and responsible AI usage.',
   },
   {
     id: 'faq-5',
     category: 'robotics-ai',
     categoryLabel: 'AI & Robotics',
     q: 'What will my child learn in the Robotics course?',
-    a: 'Our online robotics course for kids teaches students how to build and program real robots. They learn electronics, Arduino programming, sensors, motors, automation, and engineering concepts through exciting hands-on projects that develop creativity, logical thinking, and problem-solving skills.',
+    a: 'Our online robotics classes for kids teach students how to build and program real robots. They learn electronics, Arduino programming, sensors, motors, automation, and engineering concepts through exciting hands-on projects that develop creativity and problem-solving skills.',
   },
   {
     id: 'faq-6',
@@ -69,14 +69,14 @@ const faqList: FAQData[] = [
     category: 'robotics-ai',
     categoryLabel: 'AI & Robotics',
     q: 'Can kids really learn Robotics online?',
-    a: 'Absolutely. Our live online robotics classes combine expert instruction with hands-on robotics kits, allowing students to build real projects from home while receiving personalized guidance from experienced mentors.',
+    a: 'Absolutely. Our online robotics classes for kids combine expert 1:1 live instruction with physical robotics kits shipped to your doorstep, allowing students to build real projects from home while receiving personalized guidance.',
   },
   {
     id: 'faq-9',
     category: 'robotics-ai',
     categoryLabel: 'AI & Robotics',
     q: 'What is included in the Robotics Kit?',
-    a: 'Every student receives a comprehensive robotics kit containing everything needed to build real projects. The kit includes an Arduino-compatible board, breadboard, LEDs, resistors, over 10 sensors including ultrasonic and IR sensors, multiple motors and actuators such as servo motors and DC motors, a motor driver, robot chassis, jumper wires, battery holder, USB cable, and other electronic components used throughout the course.',
+    a: 'Every student in our robotics classes for kids with kit included receives a comprehensive hardware kit. The kit includes an Arduino-compatible microcontroller, breadboard, LEDs, resistors, over 10 sensors including ultrasonic and IR sensors, multiple motors, robot chassis, jumper wires, battery holder, and electronic components.',
   },
   {
     id: 'faq-10',
@@ -90,7 +90,7 @@ const faqList: FAQData[] = [
     category: 'classes',
     categoryLabel: 'Classes & Mentorship',
     q: 'What if my child misses a class?',
-    a: 'If a student misses a class, our team helps them catch up through class recordings (where available), additional mentor support, or a rescheduled makeup session based on the program and availability.',
+    a: 'If a student misses a class, our team helps them catch up through class recordings, additional mentor support, or a rescheduled makeup session based on availability.',
   },
   {
     id: 'faq-12',
@@ -103,8 +103,8 @@ const faqList: FAQData[] = [
     id: 'faq-13',
     category: 'courses',
     categoryLabel: 'Courses',
-    q: 'Will my child build their own projects?',
-    a: "Yes. Every CodeBotix course is project-based. Students don't just learn concepts, they apply them by creating real AI applications, robotics projects, and engineering prototypes that build confidence, creativity, and innovation.",
+    q: 'Are these AI classes for kids with real projects?',
+    a: 'Yes! CodeBotix offers ai classes for kids with real projects. Students don’t just study theory, they build working AI applications, chatbots, and hardware robotics prototypes.',
   },
   {
     id: 'faq-14',
@@ -118,7 +118,7 @@ const faqList: FAQData[] = [
     category: 'trust',
     categoryLabel: 'Recognition & Global',
     q: 'Why choose CodeBotix over other AI and Robotics classes?',
-    a: 'CodeBotix combines live 1:1 mentoring, hands-on learning, and real-world projects to deliver a personalized learning experience. Instead of relying on pre-recorded videos, every student learns directly from an expert mentor, builds real AI and robotics projects, and develops future-ready skills through practical application.',
+    a: 'CodeBotix provides the best robotics and AI course for kids by combining live 1:1 mentoring, hands-on physical kits, and ISRO-recognized curriculum. Instead of watching pre-recorded videos, every student builds real projects with personal guidance.',
   },
   {
     id: 'faq-16',
@@ -172,7 +172,6 @@ export default function FAQ() {
 
   const toggle = (id: string) => setOpenId((prev) => (prev === id ? null : id));
 
-  // Filter FAQs based on active category and search query
   const filteredFaqs = useMemo(() => {
     return faqList.filter((item) => {
       const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
@@ -184,7 +183,6 @@ export default function FAQ() {
     });
   }, [activeCategory, searchQuery]);
 
-  // Generate Google Schema.org FAQPage structured data for rich snippets SERP
   const faqSchema = useMemo(() => {
     return {
       '@context': 'https://schema.org',
@@ -207,7 +205,6 @@ export default function FAQ() {
       aria-label="Frequently asked questions section"
       ref={ref as React.RefObject<HTMLElement>}
     >
-      {/* Schema.org FAQPage Structured Data Injection for Google SEO */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -221,11 +218,10 @@ export default function FAQ() {
                 Frequently Asked <span className={styles.accent}>Questions</span>
               </>
             }
-            subtitle="Everything parents and students need to know about CodeBotix online AI & Robotics classes."
+            subtitle="Everything parents and students need to know about CodeBotix online AI and robotics classes for kids."
             theme="dark"
           />
 
-          {/* SEO Search Bar */}
           <div className={styles.searchWrap}>
             <Search size={18} className={styles.searchIcon} />
             <input
@@ -260,7 +256,6 @@ export default function FAQ() {
           </div>
         </div>
 
-        {/* FAQ Accordion List */}
         <div
           className={[styles.accordion, isVisible ? styles.visible : ''].join(' ')}
           role="list"

@@ -10,29 +10,29 @@ const features = [
     icon: <Wrench size={28} />,
     stat: '100%',
     statLabel: 'Hands-On Projects',
-    title: 'Build Real Stuff',
-    desc: 'No boring theory! Kids build working robots, smart apps, and cool 3D designs from day one.',
+    title: 'Build Real Hardware',
+    desc: 'With robotics classes for kids with kit included, students build real robots and smart apps from day one.',
   },
   {
     icon: <Heart size={28} />,
     stat: '1:1',
     statLabel: 'Student-Teacher Ratio',
-    title: '1:1 Personal Attention',
-    desc: 'Every child gets dedicated one-on-one guidance from their instructor.',
+    title: '1:1 Personalized Classes',
+    desc: 'Every student receives dedicated one-on-one attention in personalized robotics classes for kids.',
   },
   {
     icon: <Award size={28} />,
     stat: 'ISRO',
-    statLabel: 'Recognized Curriculum',
-    title: 'Skills That Actually Matter',
-    desc: 'Learn the same tools used by real engineers and developers in top tech companies.',
+    statLabel: 'Recognized Partner',
+    title: 'Certified AI Classes',
+    desc: 'CodeBotix provides certified ai classes for kids with curriculum designed alongside mentors.',
   },
   {
     icon: <Target size={28} />,
     stat: '15+',
     statLabel: 'Projects Per Level',
-    title: 'Take Projects Home',
-    desc: 'Every robot, app, and 3D print becomes part of your child\'s amazing tech portfolio.',
+    title: 'AI Classes with Real Projects',
+    desc: 'Experience AI classes for kids with real projects where every creation builds an impressive tech portfolio.',
   },
 ];
 
@@ -51,11 +51,11 @@ export default function HowWeMakeLearningFun() {
           <SectionHeader
             title={
               <>
-                How We Make Learning{' '}
+                How CodeBotix Makes Learning{' '}
                 <span className={styles.accent}>Actually Fun</span>
               </>
             }
-            subtitle="Step-by-step projects that turn curious kids into confident creators"
+            subtitle="Step-by-step online AI and robotics classes for kids that turn curious children into confident creators"
             theme="light"
           />
         </div>

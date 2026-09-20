@@ -41,7 +41,7 @@ export default function Enroll() {
             <span className={styles.accent}>Tech Career?</span>
           </h2>
           <p className={styles.subtext}>
-            Join 6,000+ students worldwide. Start with a free class, no commitment needed.
+            Join 6,000+ students worldwide in the best online ai and robotics classes for kids. Start with a free trial class today!
           </p>
 
           {/* Benefits */}
@@ -68,8 +68,6 @@ export default function Enroll() {
               View All Plans
             </Button>
           </div>
-
-           
         </div>
       </div>
     </section>

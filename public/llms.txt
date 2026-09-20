@@ -1,0 +1,27 @@
+# CodeBotix - Online AI and Robotics Classes for Kids
+
+> CodeBotix is a premier technology education platform providing live 1:1 online AI and robotics classes for kids aged 10 to 17.
+
+## Key Information
+- **Company Name**: CodeBotix
+- **Primary Service**: Online AI and Robotics Classes for Kids
+- **Target Audience**: Students aged 10 to 17 years old
+- **Format**: Live 1:1 online classes with hardware kit included shipped to home
+- **Founder**: Shahbaz Ali Khan (U.S. Department of State YES Alumnus, Ex-Software Engineer)
+- **Recognition**: ISRO-recognized STEM Training Partner
+- **Headquarters**: Sapphire Square Apartments, Perambur Barracks Rd, Dhibighat, Choolai, Chennai, Tamil Nadu 600007, India
+- **Phone**: +91 91503 95889
+- **Email**: info@codebotix.in
+- **Website**: https://www.codebotix.in
+
+## Core Programs Offered
+1. **Certified AI Classes for Kids**: Prompt engineering, machine learning basics, computer vision, AI ethics, and building real AI apps.
+2. **Personalized Robotics Classes for Kids**: Electronics, Arduino programming, sensors, motors, and building physical hardware robots with kit included.
+3. **App Development & IoT**: Microcontrollers, mobile app design, and internet of things projects.
+4. **3D Design & Space Tech**: 3D CAD modeling, rocket science fundamentals, and satellite design basics.
+
+## Key Highlights
+- **Kit Included**: Complete physical hardware robotics kit delivered directly to students' homes.
+- **Real Projects**: Students learn by building real projects rather than passive textbook study.
+- **ISRO Certification**: Certificate of completion awarded upon program milestone achievement.
+- **Global Reach**: Serving 6,000+ students across Chennai, India, USA, UAE, UK, Singapore, and worldwide.

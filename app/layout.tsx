@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { defaultMetadata, organizationSchema, courseSchema, websiteSchema } from '@/lib/metadata';
+import { defaultMetadata, organizationSchema, localBusinessSchema, courseSchema, websiteSchema } from '@/lib/metadata';
 import FloatingChat from '@/components/ui/FloatingChat';
 import SmoothScroll from '@/components/ui/SmoothScroll';
 import { GoogleAnalytics } from '@next/third-parties/google';
@@ -28,6 +28,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
         <script
           type="application/ld+json"

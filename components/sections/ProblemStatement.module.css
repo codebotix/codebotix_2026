@@ -1,21 +1,10 @@
 .section {
-  background: var(--gradient-darker);
-  color: var(--white);
+  background: #d6e2d8;
+  color: #122018;
   padding: 100px 0;
   position: relative;
-  overflow: hidden;
-}
-
-.section::before {
-  content: '';
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(108, 92, 231, 0.2) 0%, transparent 70%);
-  top: -100px;
-  left: 50%;
-  transform: translateX(-50%);
-  pointer-events: none;
+  border-top: 1px solid rgba(18, 32, 24, 0.1);
+  border-bottom: 1px solid rgba(18, 32, 24, 0.1);
 }
 
 .container {
@@ -24,85 +13,109 @@
   padding: var(--container-padding);
 }
 
-.headerWrap {
+.badgeWrap {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  margin-bottom: 40px;
 }
 
-.headerWrap.visible {
+.badgeWrap.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.statsGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  max-width: 880px;
-  margin: 0 auto;
-}
-
-.statCard {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-xl);
-  padding: 44px 40px;
-  text-align: center;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  transition: var(--transition);
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s ease;
-}
-
-.statCard.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.statCard:hover {
-  background: rgba(255, 255, 255, 0.12);
-  transform: translateY(-4px);
-}
-
-.statValue {
-  font-family: 'Outfit', sans-serif;
-  font-size: clamp(2.8rem, 5vw, 4rem);
-  font-weight: 900;
-  line-height: 1;
-  margin-bottom: 12px;
-}
-
-.statCard.salmon .statValue {
-  color: #ff7675;
-}
-
-.statCard.gold .statValue {
-  color: var(--accent);
-}
-
-.statLabel {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.15rem;
+.badge {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
   font-weight: 700;
-  color: var(--white);
-  margin-bottom: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #1b3827;
+  background: rgba(27, 56, 39, 0.08);
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(27, 56, 39, 0.12);
 }
 
-.statDesc {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.65);
-  line-height: 1.6;
+.textStack {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  max-width: 1080px;
 }
 
-@media (max-width: 640px) {
-  .statsGrid {
-    grid-template-columns: 1fr;
+.largeStatement {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-size: clamp(2.1rem, 4.2vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+  color: #0e1e15;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.largeStatement.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.subStatement {
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  font-weight: 500;
+  line-height: 1.35;
+  color: rgba(14, 30, 21, 0.85);
+  padding-top: 24px;
+  border-top: 1px solid rgba(14, 30, 21, 0.15);
+}
+
+/* Highlight Red for 42.6% */
+.highlightRed {
+  color: #dc2626;
+  background: rgba(220, 38, 38, 0.12);
+  padding: 2px 12px;
+  border-radius: 10px;
+  font-weight: 800;
+  display: inline-block;
+}
+
+/* Highlight Yellow for 80% */
+.highlightYellow {
+  color: #854d0e;
+  background: #fef08a;
+  padding: 2px 12px;
+  border-radius: 10px;
+  font-weight: 800;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(234, 179, 8, 0.2);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 0;
   }
 
-  .statCard {
-    padding: 32px 24px;
+  .textStack {
+    gap: 36px;
+  }
+
+  .largeStatement {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+    line-height: 1.28;
+  }
+
+  .subStatement {
+    font-size: clamp(1.15rem, 4.2vw, 1.45rem);
+    padding-top: 20px;
+  }
+
+  .highlightRed,
+  .highlightYellow {
+    padding: 1px 8px;
+    border-radius: 6px;
   }
 }

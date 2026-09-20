@@ -5,13 +5,23 @@ const siteConfig = {
   name: 'CodeBotix',
   tagline: 'Online AI and Robotics Classes for Kids',
   description:
-    'Enroll in live 1:1 Online AI and Robotics Classes for Kids aged 10-17 at CodeBotix. Build real hardware robots at home with expert mentorship. Book a free trial class today!',
+    'Enroll in live 1:1 online AI and robotics classes for kids at CodeBotix. Build real hardware robots at home with expert mentors. Book your free trial class today!',
   url: 'https://www.codebotix.in',
-  ogImage: '/og-image.png',
+  ogImage: '/online-ai-and-robotics-classes-for-kids-with-codebotix.png',
   twitterHandle: '@codebotix',
   keywords: [
-    'Online AI and Robotics Classes for Kids',
+    'online ai and robotics classes for kids',
+    'certified ai classes for kids',
+    'personalized robotics classes for kids',
+    'robotics classes for kids with kit included',
+    'best robotics course for kids',
     'online robotics classes for kids',
+    'best robotics classes for kids in chennai',
+    'best ai class for children',
+    'ai classes for kids with real projects',
+    'CodeBotix online courses',
+    'CodeBotix AI and robotics academy',
+    'STEM education online for kids',
     'AI courses for children',
     'STEM education online',
     'robotics classes for kids aged 10-17',
@@ -21,8 +31,7 @@ const siteConfig = {
     'build robots at home',
     'kids AI programming',
     'Arduino robotics for kids',
-    'CodeBotix online courses',
-    'live 1:1 robotics mentorship',
+    
   ],
 };
 
@@ -65,7 +74,7 @@ export const defaultMetadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: siteConfig.ogImage,
+        url: `${siteConfig.url}/online-ai-and-robotics-classes-for-kids-with-codebotix.png`,
         width: 1200,
         height: 630,
         alt: 'CodeBotix: Online AI and Robotics Classes for Kids',
@@ -77,7 +86,7 @@ export const defaultMetadata: Metadata = {
     title: 'Online AI and Robotics Classes for Kids | CodeBotix',
     description: siteConfig.description,
     creator: siteConfig.twitterHandle,
-    images: [siteConfig.ogImage],
+    images: [`${siteConfig.url}/online-ai-and-robotics-classes-for-kids-with-codebotix.png`],
   },
   alternates: {
     canonical: siteConfig.url,
@@ -105,10 +114,43 @@ export const organizationSchema = {
   award: 'Mentored by ISRO Mentors & STEM Grant Recipients',
 };
 
+export const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': ['EducationalOrganization', 'LocalBusiness'],
+  '@id': `${siteConfig.url}/#localbusiness`,
+  name: 'CodeBotix',
+  url: siteConfig.url,
+  logo: `${siteConfig.url}/codebotix_logo.png`,
+  image: `${siteConfig.url}/online-ai-and-robotics-classes-for-kids-with-codebotix.png`,
+  description: siteConfig.description,
+  telephone: '+91-9150395889',
+  email: 'info@codebotix.in',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Sapphire Square Apartments, Perambur Barracks Rd, Dhibighat, Choolai',
+    addressLocality: 'Chennai',
+    addressRegion: 'Tamil Nadu',
+    postalCode: '600007',
+    addressCountry: 'IN',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 13.0878,
+    longitude: 80.2644,
+  },
+  priceRange: '$$',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '66',
+  },
+  areaServed: ['Chennai', 'India', 'Worldwide'],
+};
+
 export const courseSchema = {
   '@context': 'https://schema.org',
   '@type': 'Course',
-  name: 'Online Robotics & AI Classes for Kids (Ages 10-17)',
+  name: 'Online AI and Robotics Classes for Kids (Ages 10-17)',
   description: siteConfig.description,
   provider: {
     '@type': 'Organization',
@@ -132,7 +174,7 @@ export const courseSchema = {
   hasCourseInstance: {
     '@type': 'CourseInstance',
     courseMode: 'online',
-    courseWorkload: 'Live 1:1 online sessions with robotics kit',
+    courseWorkload: 'Live 1:1 online sessions with robotics kit included',
   },
 };
 
@@ -149,4 +191,3 @@ export const websiteSchema = {
 };
 
 export { siteConfig };
-

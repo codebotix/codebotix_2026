@@ -1,7 +1,10 @@
 .section {
-  background: var(--gradient-dark);
-  color: var(--white);
-  padding: 100px 0;
+  background: var(--off-white);
+  color: var(--text-dark);
+  padding: 88px 0;
+  position: relative;
+  border-top: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-dark);
 }
 
 .container {
@@ -12,8 +15,9 @@
 
 .headerWrap {
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(24px);
   transition: opacity 0.6s ease, transform 0.6s ease;
+  margin-bottom: 40px;
 }
 
 .headerWrap.visible {
@@ -22,119 +26,126 @@
 }
 
 .accent {
-  color: var(--accent);
+  color: var(--purple-light);
 }
 
-/* Quote Card */
-.quoteCard {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: var(--radius-xl);
-  padding: 40px 48px;
-  text-align: center;
-  margin-bottom: 32px;
+/* Quote Section: Editorial Callout (No Card Box!) */
+.quoteWrap {
+  background: var(--white);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  padding: 28px 36px;
+  margin-bottom: 56px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(24px);
   transition: opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s;
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.quoteCard.visible {
+.quoteWrap.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.quoteText {
+.quoteQuestion {
   font-family: 'Outfit', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  color: var(--white);
-  margin-bottom: 10px;
+  color: var(--primary);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .quoteAnswer {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  color: var(--text-dark);
+  font-weight: 500;
+  line-height: 1.6;
 }
 
-/* Feature Grid */
-.grid {
+/* 2-Column Minimalist List (No cards!) */
+.listGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 48px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
   gap: 20px;
-}
-
-.card {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-xl);
-  padding: 32px 24px;
-  transition: var(--transition);
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.card.visible {
+.listItem.visible {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.6s ease, transform 0.6s ease, background 0.3s ease;
-}
-
-.card:hover {
-  background: rgba(255, 255, 255, 0.12);
-  transform: translateY(-4px);
 }
 
 .iconBox {
-  width: 52px;
-  height: 52px;
-  background: var(--gradient-accent);
+  width: 48px;
+  height: 48px;
+  background: rgba(90, 79, 207, 0.08);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--white);
-  margin-bottom: 20px;
-  box-shadow: var(--shadow-accent);
+  color: var(--purple-light);
+  flex-shrink: 0;
 }
 
-.cardTitle {
+.contentBox {
+  flex: 1;
+}
+
+.itemTitle {
   font-family: 'Outfit', sans-serif;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  color: var(--accent);
-  margin-bottom: 10px;
+  color: var(--primary);
+  margin-bottom: 6px;
+  line-height: 1.3;
 }
 
-.cardDesc {
-  font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.7);
+.itemDesc {
+  font-size: 0.94rem;
+  color: var(--text-muted);
   line-height: 1.6;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
-.cardTag {
+.tagPill {
   display: inline-block;
-  background: rgba(245, 166, 35, 0.15);
-  color: rgba(245, 166, 35, 0.9);
+  background: rgba(245, 166, 35, 0.12);
+  color: var(--accent-dark);
   font-size: 0.78rem;
   font-weight: 600;
-  padding: 6px 14px;
-  border-radius: var(--radius-sm);
-  line-height: 1.4;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
 }
 
-@media (max-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
   }
-}
 
-@media (max-width: 640px) {
-  .grid {
+  .listGrid {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
 
-  .quoteCard {
-    padding: 32px 24px;
+  .quoteWrap {
+    padding: 24px 20px;
   }
 }

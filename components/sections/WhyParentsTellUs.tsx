@@ -6,24 +6,28 @@ import styles from './WhyParentsTellUs.module.css';
 
 const problems = [
   {
-    icon: <TrendingDown size={28} />,
+    num: '01',
+    icon: <TrendingDown size={22} />,
     title: 'Only Theory, No Practice',
-    desc: 'Kids study from books but never build anything real',
+    desc: 'Kids study from textbooks but never build or test real working hardware or software.',
   },
   {
-    icon: <AlertCircle size={28} />,
+    num: '02',
+    icon: <AlertCircle size={22} />,
     title: 'Missing Future Skills',
-    desc: 'No exposure to AI, robotics, or 3D printing in schools',
+    desc: 'Traditional schools offer zero hands-on exposure to AI, robotics, microcontrollers, or 3D design.',
   },
   {
-    icon: <Target size={28} />,
-    title: 'Boring Learning',
-    desc: 'Memorization instead of exciting hands-on projects',
+    num: '03',
+    icon: <Target size={22} />,
+    title: 'Boring Rote Learning',
+    desc: 'Students are forced into passive memorization instead of creating exciting, personal projects.',
   },
   {
-    icon: <Lightbulb size={28} />,
+    num: '04',
+    icon: <Lightbulb size={22} />,
     title: 'Unprepared for Tomorrow',
-    desc: 'Kids lack tech skills needed for future careers',
+    desc: 'Children lack the technical confidence, problem-solving mindset, and digital literacy required for modern tech careers.',
   },
 ];
 
@@ -40,31 +44,35 @@ export default function WhyParentsTellUs() {
       <div className={styles.container}>
         {/* Section Title */}
         <div className={[styles.titleWrap, isVisible ? styles.visible : ''].join(' ')}>
-          <p className={styles.sectionLabel}>What Parents Tell Us:</p>
+          <h2 className={styles.sectionLabel}>What Parents Tell Us</h2>
+          <p className={styles.subLabel}>The core gaps parents encounter in traditional schooling today</p>
         </div>
 
-        {/* Problem Cards */}
-        <div className={styles.grid}>
+        {/* Problem Minimalist Flow Row */}
+        <div className={styles.flowRow}>
           {problems.map((item, i) => (
             <div
               key={item.title}
-              className={[styles.card, isVisible ? styles.visible : ''].join(' ')}
+              className={[styles.flowItem, isVisible ? styles.visible : ''].join(' ')}
               style={{ transitionDelay: `${i * 0.1}s` }}
             >
-              <div className={styles.iconBox}>{item.icon}</div>
-              <h3 className={styles.cardTitle}>{item.title}</h3>
-              <p className={styles.cardDesc}>{item.desc}</p>
+              <div className={styles.itemHeader}>
+                <span className={styles.itemNumber}>{item.num}</span>
+                <span className={styles.iconWrapper}>{item.icon}</span>
+              </div>
+              <h3 className={styles.itemTitle}>{item.title}</h3>
+              <p className={styles.itemDesc}>{item.desc}</p>
             </div>
           ))}
         </div>
 
-        {/* Solution Banner */}
+        {/* Solution Callout Banner */}
         <div className={[styles.solutionBanner, isVisible ? styles.visible : ''].join(' ')}>
           <h3 className={styles.bannerHeading}>
             That&apos;s Why We Created <span className={styles.accent}>CodeBotix</span>
           </h3>
           <p className={styles.bannerSubtitle}>
-            Real projects. Real skills. Real preparation for the future.
+            Offering the best robotics course for kids, online robotics classes for kids, and certified ai classes for kids with live 1:1 mentorship.
           </p>
         </div>
       </div>

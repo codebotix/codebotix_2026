@@ -1,34 +1,34 @@
 'use client';
 
-import { Lightbulb, Trophy, Globe, Code } from 'lucide-react';
+import { Lightbulb, Trophy, Globe, Code, HelpCircle } from 'lucide-react';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 import SectionHeader from '@/components/ui/SectionHeader';
 import styles from './WhatMakesUsUnique.module.css';
 
 const uniqueFeatures = [
   {
-    icon: <Lightbulb size={26} />,
-    title: 'Problem-Solving',
-    desc: 'Think like an engineer and solve real-world challenges',
-    tag: 'Design solutions for everyday problems',
+    icon: <Lightbulb size={24} />,
+    title: 'Problem-Solving Mindset',
+    desc: 'Think like an engineer in personalized robotics classes for kids, designing practical solutions for real-world challenges.',
+    tag: 'Hands-On Engineering',
   },
   {
-    icon: <Trophy size={26} />,
-    title: 'Competition Ready',
-    desc: 'Win robotics competitions & tech showcases',
-    tag: 'Access to national & international contests',
+    icon: <Trophy size={24} />,
+    title: 'Competition & Showcase Ready',
+    desc: 'Gain skills and confidence in the best robotics course for kids to enter national and international tech contests.',
+    tag: 'Global Contests',
   },
   {
-    icon: <Globe size={26} />,
-    title: 'Global Standards',
-    desc: 'ISRO-recognized curriculum used worldwide',
-    tag: 'Same quality as top international programs',
+    icon: <Globe size={24} />,
+    title: 'Global Standards in Chennai & Worldwide',
+    desc: 'CodeBotix delivers the best robotics classes for kids in chennai and online across the globe with ISRO-recognised curriculum.',
+    tag: 'Worldwide mentorship',
   },
   {
-    icon: <Code size={26} />,
-    title: 'Master Tech',
-    desc: 'Build real-world tech skills that employers love',
-    tag: 'Industry-relevant tools and technologies',
+    icon: <Code size={24} />,
+    title: 'Master Emerging Technologies',
+    desc: 'Experience the best ai class for children, building real-world proficiency in AI, Python, microcontrollers, IoT, and algorithms.',
+    tag: 'Future-Ready Skills',
   },
 ];
 
@@ -47,35 +47,39 @@ export default function WhatMakesUsUnique() {
           <SectionHeader
             title={
               <>
-                What Makes Us <span className={styles.accent}>Unique?</span>
+                What Makes CodeBotix <span className={styles.accent}>Unique?</span>
               </>
             }
-            theme="dark"
+            subtitle="The premier destination for certified ai classes for kids and personalized online robotics learning"
+            theme="light"
           />
         </div>
 
-        {/* Quote Card */}
-        <div className={[styles.quoteCard, isVisible ? styles.visible : ''].join(' ')}>
-          <p className={styles.quoteText}>
-            &quot;Will my child just get another certificate?&quot;
-          </p>
+        {/* Editorial Parent Question */}
+        <div className={[styles.quoteWrap, isVisible ? styles.visible : ''].join(' ')}>
+          <h3 className={styles.quoteQuestion}>
+            <HelpCircle size={20} color="var(--purple-light)" />
+            &quot;Will my child just get another paper certificate?&quot;
+          </h3>
           <p className={styles.quoteAnswer}>
-            No! They&apos;ll build an amazing portfolio of real projects that wow everyone.
+            No! At CodeBotix, students build an impressive portfolio of functional hardware projects, working AI apps, and custom creations that demonstrate true technical mastery.
           </p>
         </div>
 
-        {/* Feature Cards */}
-        <div className={styles.grid}>
+        {/* Minimalist 2-Column Feature List */}
+        <div className={styles.listGrid}>
           {uniqueFeatures.map((item, i) => (
             <div
               key={item.title}
-              className={[styles.card, isVisible ? styles.visible : ''].join(' ')}
+              className={[styles.listItem, isVisible ? styles.visible : ''].join(' ')}
               style={{ transitionDelay: `${0.2 + i * 0.1}s` }}
             >
               <div className={styles.iconBox}>{item.icon}</div>
-              <h3 className={styles.cardTitle}>{item.title}</h3>
-              <p className={styles.cardDesc}>{item.desc}</p>
-              <div className={styles.cardTag}>{item.tag}</div>
+              <div className={styles.contentBox}>
+                <h3 className={styles.itemTitle}>{item.title}</h3>
+                <p className={styles.itemDesc}>{item.desc}</p>
+                <span className={styles.tagPill}>{item.tag}</span>
+              </div>
             </div>
           ))}
         </div>

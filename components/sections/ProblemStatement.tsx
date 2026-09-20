@@ -1,23 +1,7 @@
 'use client';
 
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
-import SectionHeader from '@/components/ui/SectionHeader';
 import styles from './ProblemStatement.module.css';
-
-const stats = [
-  {
-    value: '42.6%',
-    label: 'Graduates Are Unemployable',
-    desc: 'Due to lack of practical skills in today\'s tech-driven world',
-    color: 'salmon',
-  },
-  {
-    value: '80%',
-    label: 'Not Ready for AI Jobs',
-    desc: 'Of workforce lacks AI skills needed for future careers',
-    color: 'gold',
-  },
-];
 
 export default function ProblemStatement() {
   const { ref, isVisible } = useIntersectionObserver({ threshold: 0.15 });
@@ -30,32 +14,34 @@ export default function ProblemStatement() {
       ref={ref as React.RefObject<HTMLElement>}
     >
       <div className={styles.container}>
-        <div className={[styles.headerWrap, isVisible ? styles.visible : ''].join(' ')}>
-          <SectionHeader
-            title="The Problem with Traditional Learning"
-            subtitle="While kids study theory in textbooks, they're missing out on the hands-on tech skills they need for tomorrow's jobs."
-            theme="dark"
-          />
+        <div className={[styles.badgeWrap, isVisible ? styles.visible : ''].join(' ')}>
+          <span className={styles.badge}>THE PROBLEM WITH TRADITIONAL LEARNING</span>
         </div>
 
-        <div className={styles.statsGrid}>
-          {stats.map((stat, i) => (
-            <div
-              key={stat.label}
-              className={[
-                styles.statCard,
-                styles[stat.color],
-                isVisible ? styles.visible : '',
-              ].join(' ')}
-              style={{ transitionDelay: `${i * 0.15}s` }}
-            >
-              <div className={styles.statValue}>{stat.value}</div>
-              <div className={styles.statLabel}>{stat.label}</div>
-              <p className={styles.statDesc}>{stat.desc}</p>
-            </div>
-          ))}
+        <div className={styles.textStack}>
+          <h2
+            className={[styles.largeStatement, isVisible ? styles.visible : ''].join(' ')}
+            style={{ transitionDelay: '0.1s' }}
+          >
+            Today, <span className={styles.highlightRed}>42.6%</span> of graduates are unemployable.
+          </h2>
+
+          <h2
+            className={[styles.largeStatement, isVisible ? styles.visible : ''].join(' ')}
+            style={{ transitionDelay: '0.25s' }}
+          >
+            Meanwhile, <span className={styles.highlightYellow}>80%</span> of the workforce is unprepared for AI.
+          </h2>
+
+          <p
+            className={[styles.largeStatement, styles.subStatement, isVisible ? styles.visible : ''].join(' ')}
+            style={{ transitionDelay: '0.4s' }}
+          >
+            While children study theory in traditional classrooms, CodeBotix provides personalized robotics classes with kit included so students build real-world AI and technical confidence.
+          </p>
         </div>
       </div>
     </section>
   );
 }
+

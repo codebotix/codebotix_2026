@@ -33,17 +33,15 @@ export default function Hero() {
 
           {/* Heading */}
           <h1 className={styles.heading}>
-            Online Robotics & AI
+            Online AI and Robotics
             <br />
             Classes for Kids{' '}
-            <span className={styles.accentText}>(Ages 10–17)</span>
+            <span className={styles.accentText}>(Ages 10-17)</span>
           </h1>
 
           {/* Description */}
           <p className={styles.description}>
-            Join worldwide online robotics classes for kids! Step-by-step AI and
-            robotics projects at home. Build real robots, create smart apps, and
-            design cool gadgets with expert tutors.
+            Join CodeBotix for the best online AI and robotics classes for kids. Discover certified AI classes for kids and personalized robotics classes for kids with kit included. Build real hardware projects and master technology at home with expert mentors.
           </p>
 
           {/* Highlights */}
@@ -80,23 +78,23 @@ export default function Hero() {
           {/* Main Image */}
           <div className={styles.imageCard}>
             <Image
-              src="/images/online-ai-and-robotics-classes-for-kids.jpg"
-              alt="Online AI and robotics class for kids with CodeBotix"
+              src="/online-ai-and-robotics-classes-for-kids-with-codebotix.png"
+              alt="Online AI and robotics classes for kids with CodeBotix"
               width={520}
               height={400}
               priority
               className={styles.heroImage}
             />
+          </div>
 
-            {/* Floating Label: Build Real Robots */}
-            <div className={styles.floatBadge1} aria-label="Build Real Robots">
-              Build Real Robots!
-            </div>
+          {/* Floating Label: Build Real Robots */}
+          <div className={styles.floatBadge1} aria-label="Build Real Robots">
+            Build Real Robots!
+          </div>
 
-            {/* Floating Label: At-Home Learning */}
-            <div className={styles.floatBadge2} aria-label="At-Home Learning">
-              At-Home Learning
-            </div>
+          {/* Floating Label: At-Home Learning */}
+          <div className={styles.floatBadge2} aria-label="At-Home Learning">
+            At-Home Learning
           </div>
         </div>
       </div>
