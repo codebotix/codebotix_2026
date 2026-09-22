@@ -77,7 +77,7 @@ export const defaultMetadata: Metadata = {
         url: `${siteConfig.url}/online-ai-and-robotics-classes-for-kids-with-codebotix.png`,
         width: 1200,
         height: 630,
-        alt: 'CodeBotix: Online AI and Robotics Classes for Kids',
+        alt: 'Online AI and Robotics Classes for Kids | CodeBotix',
       },
     ],
   },
